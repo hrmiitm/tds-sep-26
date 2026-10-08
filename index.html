@@ -34,6 +34,144 @@ table{border-collapse:collapse;width:100%;font-size:16px}th{text-align:left;colo
 @media(max-width:680px){.course-hub{display:block;padding:17px 18px}.hub-link{font-size:26px}.policy-link{display:inline-block;margin-top:14px}.grade-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.grade-part,.grade-part:first-child,.grade-part:last-child{border-radius:6px;padding:12px 7px}.grade-part strong{font-size:28px}.grade-part small{font-size:11px}.grade-heading h3{font-size:18px}.grade-heading p{font-size:12px;line-height:1.5}.course-rules,.course-support{grid-template-columns:1fr;gap:18px}.course-rules{margin:23px 0}.course-rules p{font-size:17px}.course-support p{font-size:14px}.course-updates{display:grid;gap:10px}.session-strip{gap:7px;font-size:12px;line-height:1.8}}
 @media print{.course-hub{margin:12px 0;padding:12px 18px}.hub-link{font-size:23pt}.grade-grid{grid-template-columns:repeat(5,minmax(0,1fr))}.grade-part strong{font-size:23pt}.grade-part small{font-size:9pt}.course-rules,.course-support{grid-template-columns:1fr 1fr}.course-rules p{font-size:12pt}.course-support p{font-size:10pt}.course-updates p{font-size:9pt}.session-strip{font-size:9pt}}
 </style>
+<style id="exercise-visibility">
+/* Student-facing prompts stay large in both presentation and reading views. */
+.slide .prompt-label{font-size:18px;letter-spacing:1px}
+.slide .prompt{font-size:24px;line-height:1.4;font-weight:500;color:var(--ink)}
+.slide .diy{font-size:24px;line-height:1.4;font-weight:500;color:var(--ink);background:var(--peach);border-top:0;border-left:4px solid var(--orange);border-radius:7px;padding:16px 22px;margin-top:18px}
+.slide .diy>b{font-size:20px;line-height:1.3;letter-spacing:.7px;font-weight:750;margin-bottom:10px}
+.slide .diy p{margin:0}.slide .diy p+p{margin-top:10px}
+.slide .diy .exercise-extra{font-size:22px}
+.slide .diy .small,.slide .exercise-note{font-size:18px;line-height:1.45;color:var(--ink);font-weight:400}
+.slide .diy .exercise-note{margin-top:10px}
+.slide .question-heading{font-size:24px;line-height:1.3}
+.slide .task .task-number{font-size:16px;letter-spacing:.5px}
+.slide .task h3{font-size:24px;line-height:1.25}
+.slide .task p{font-size:20px;line-height:1.4;font-weight:500;color:var(--ink)}
+#slide-23 .callout{font-size:20px;line-height:1.4}#slide-23 .exercise-note{font-size:18px}
+#slide-3 .grid{gap:20px}#slide-3 .diagram{max-height:210px}
+@media screen and (min-width:900px) and (max-height:850px){body.present .slide .prompt{margin:8px 0 14px}body.present .slide .diy{padding:13px 18px;margin-top:14px}body.present .slide .diy p{margin:0}body.present .slide .diy p+p{margin-top:8px}body.present .slide .task h3{font-size:22px}body.present .slide .task p{margin:0}body.present #slide-3 .diagram{max-height:190px}body.present #slide-23 .task-board{gap:17px 22px}body.present #slide-23 .task{padding-top:10px}body.present #slide-23 .lead{margin-bottom:15px}}
+@media(max-width:900px){.slide .task-board{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:680px){.slide .prompt{font-size:22px}.slide .prompt-label{font-size:17px}.slide .diy{font-size:22px;padding:17px 18px}.slide .diy>b{font-size:20px}.slide .diy .exercise-extra{font-size:21px}.slide .diy .small,.slide .exercise-note{font-size:18px}.slide .task-board{grid-template-columns:1fr;gap:24px}.slide .task h3{font-size:24px}.slide .task p{font-size:20px}.slide .task .task-number{font-size:16px}.slide .question-heading{font-size:24px}#slide-3 .diagram{max-height:210px}}
+@media print{.slide .prompt,.slide .diy{font-size:16pt}.slide .prompt-label,.slide .diy>b{font-size:13pt}.slide .task-board{grid-template-columns:repeat(3,minmax(0,1fr))}.slide .task h3{font-size:16pt}.slide .task p{font-size:13pt}.slide .task .task-number{font-size:11pt}.slide .question-heading{font-size:16pt}.slide .diy .small,.slide .exercise-note{font-size:12pt}}
+
+/* Keep the enlarged exercises above the navigation bar on classroom screens. */
+.slide .question-text{font-size:22px;line-height:1.4;color:var(--ink)}
+@media screen and (min-width:900px) and (max-height:850px){
+body.present .exercise-slide{padding-top:16px;padding-bottom:16px}
+body.present .exercise-slide .meta{margin-bottom:8px}
+body.present .exercise-slide h2{margin-bottom:9px}
+body.present .exercise-slide .prompt-label{line-height:1.1}
+body.present .exercise-slide .prompt{margin:6px 0 10px;line-height:1.35}
+body.present .exercise-slide .codebox{margin:6px 0 8px;padding-bottom:10px}
+body.present .exercise-slide .small{margin-bottom:4px}
+body.present .exercise-slide .diy{padding:12px 18px;margin-top:12px;line-height:1.35}
+body.present .exercise-slide .diy>b{line-height:1.2;margin-bottom:6px}
+body.present .exercise-slide .reference{margin-top:6px;margin-bottom:0}
+body.present #slide-4 .pdf-selection{margin:12px 0}
+body.present #slide-4 .page-box{height:54px}
+body.present #slide-5 .diagram{max-height:235px}
+body.present #slide-23 .lead{margin-bottom:10px}
+body.present #slide-23 .task-board{gap:14px 22px}
+body.present #slide-23 .task{padding-top:8px}
+body.present #slide-23 .callout{margin-top:10px}
+body.present #slide-23 .exercise-note{margin-top:10px;margin-bottom:0}
+}
+</style>
+<style id="classroom-readability">
+/* Room-readable text: small presentation labels are never used for explanations. */
+body{font-size:20px}body.present{font-size:20px}
+.topbar .brand{font-size:14px}.controls button{font-size:16px}.footer-label,.counter,.key-hint{font-size:14px}.nav button{font-size:25px}
+.slide .meta,.slide .meta time{font-size:14px;letter-spacing:1px}
+.slide h1{font-size:82px}.slide h2{font-size:44px}.slide h3{font-size:23px}
+.slide p,.slide li{font-size:20px;line-height:1.45}.slide .lead{font-size:23px}
+.slide .small,.slide .small li{font-size:18px;line-height:1.4}.slide .caption,.slide .reference{font-size:16px;line-height:1.4}
+.slide .kicker,.slide .code-title,.slide .tag,.slide .prompt-label{font-size:16px}
+.slide .prompt{font-size:26px}.slide .prompt-label{font-size:18px}
+.slide .diy,.slide .diy p{font-size:25px}.slide .diy>b{font-size:22px}.slide .diy .exercise-extra{font-size:23px}.slide .diy .small,.slide .exercise-note,.slide .diy .exercise-note{font-size:19px}
+.slide .callout{font-size:20px}.slide .task p{font-size:22px}.slide .task h3{font-size:24px}.slide .task .task-number{font-size:17px}
+.slide pre,.slide .tiny-code pre{font-size:18px;line-height:1.45}.slide .tree{font-size:18px;line-height:1.6}.slide .copy{font-size:14px}
+.slide td,.slide table.compact td{font-size:18px}.slide th,.slide table.compact th{font-size:15px}
+.slide .flow .step{font-size:20px}.slide .flow .step small{font-size:16px;line-height:1.3}.slide .token span{font-size:18px}
+.slide .hero-bottom,.slide .byline,.slide .pill{font-size:17px}.slide .resource-grid h3{font-size:21px}.slide .resource-grid p{font-size:18px}
+.slide .bit span,.slide .mode-example span{font-size:17px}.slide details,.slide details p{font-size:18px}
+.slide .diagram text[font-size="11"],.slide .diagram text[font-size="12"],.slide .diagram text[font-size="13"],.slide .diagram text[font-size="14"]{font-size:17px}
+.slide .diagram text[font-size="16"]{font-size:20px}
+.slide .grade-heading h3{font-size:20px}.slide .grade-heading p{font-size:16px}.slide .grade-part>span{font-size:18px}.slide .grade-part strong{font-size:32px}.slide .grade-part small{font-size:16px}.slide .course-rules span{font-size:15px}.slide .course-rules p{font-size:20px}.slide .course-support h3{font-size:20px}.slide .course-support p{font-size:18px}.slide .course-updates p{font-size:16px}.slide .session-strip,.slide .session-strip>span:first-child{font-size:15px}.slide .course-hub p,.slide .policy-link{font-size:18px}
+.video-preview{margin:0 auto;max-width:430px;width:100%}.video-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;font-size:17px}.video-preview iframe{display:block;width:100%;height:auto;aspect-ratio:16/9;border:0;border-radius:8px;background:var(--ink)}
+.bash-resolution .bash-stage{font-size:19px;margin:0 0 10px}.bash-stage strong,.bash-expand>strong,.bash-run>strong{color:var(--teal)}
+.bash-tokens{display:grid;grid-template-columns:.65fr .9fr 2fr;gap:12px;margin-bottom:13px}.bash-tokens>div{background:var(--soft);border-radius:7px;padding:12px 16px;min-width:0}.bash-tokens code{font-size:22px;display:block;color:var(--teal);overflow-wrap:anywhere;font-weight:650}.bash-tokens span{display:block;font-size:17px;margin-top:5px;color:var(--muted)}
+.bash-expand{display:flex;gap:18px;align-items:center;font-size:19px;margin-bottom:14px}.bash-expand>strong{white-space:nowrap}.bash-expand code,.bash-branches code,.bash-run code{color:var(--teal);overflow-wrap:anywhere}
+.bash-resolution .bash-decision{font-size:24px;margin:0 0 12px}.bash-branches{display:grid;grid-template-columns:1fr 1fr;gap:18px}.bash-branch{border-radius:8px;padding:16px 18px;min-width:0}.path-branch{background:var(--peach)}.name-branch{background:var(--soft)}.branch-heading{font-size:19px;font-weight:750;margin-bottom:8px}.branch-heading span{color:var(--teal)}.bash-branch p{font-size:19px;line-height:1.45;margin-bottom:9px}.bash-branch>strong{font-size:18px;font-weight:650}.name-search{display:flex;gap:10px;align-items:center;font-size:18px;margin:9px 0 12px;flex-wrap:wrap}.name-search>span:nth-child(even){color:var(--teal)}.bash-run{display:flex;align-items:baseline;gap:18px;margin:15px 0 10px;font-size:19px}.bash-run>strong{white-space:nowrap}.bash-run p{font-size:19px;margin:0}.bash-resolution .caption{margin:8px 0}.bash-resolution .reference{margin-top:9px}
+@media screen and (min-width:900px) and (max-height:850px){body.present .slide{padding:18px 36px}body.present .slide h2{font-size:38px}body.present .slide h3{font-size:22px}body.present .slide h1{font-size:68px}body.present .slide .hero-art{max-width:380px}body.present .slide .lead{font-size:21px}body.present .slide pre,body.present .slide .tiny-code pre{font-size:17px}body.present .slide .tree{font-size:17px}body.present .slide p,body.present .slide li{font-size:20px}body.present .slide .small,body.present .slide .small li{font-size:18px}body.present .slide .caption,body.present .slide .reference{font-size:16px}body.present .slide .prompt{font-size:25px}body.present .slide .diy,body.present .slide .diy p{font-size:24px}body.present .slide .diy .exercise-extra{font-size:22px}body.present .slide .diy .exercise-note{font-size:18px}body.present .slide .diy .small{font-size:18px}body.present .slide .task p{font-size:21px}body.present .slide .grade-heading p,body.present .slide .course-updates p{font-size:16px}body.present .slide .course-support p{font-size:18px}body.present .slide .course-rules p{font-size:20px}body.present .slide .course-hub p{font-size:18px}body.present .slide .flow .step{font-size:20px}body.present .slide .flow .step small{font-size:16px}
+body.present .bash-resolution{padding:16px 36px}body.present .bash-resolution .meta{margin-bottom:9px}body.present .bash-resolution h2{font-size:36px;margin-bottom:12px}body.present .bash-resolution .bash-stage{font-size:18px;margin-bottom:8px}body.present .bash-resolution .bash-branch p,body.present .bash-resolution .bash-run p{font-size:18px}body.present .bash-resolution .bash-decision{font-size:23px}body.present .bash-resolution .bash-expand{font-size:18px}body.present .bash-resolution .bash-branch{padding:12px 15px}body.present .bash-resolution .bash-tokens>div{padding:10px 15px}body.present .bash-resolution .bash-tokens{margin-bottom:10px}body.present .bash-resolution .bash-run{margin:12px 0 8px}body.present #slide-3 .video-preview{max-width:380px}}
+@media(max-width:900px){.slide h1{font-size:62px}.slide h2{font-size:36px}.slide .bash-tokens code{font-size:19px}.slide .bash-tokens span{font-size:16px}}
+@media(max-width:680px){.slide h1{font-size:55px}.slide h2{font-size:34px}.slide p,.slide li{font-size:20px}.slide .meta{font-size:13px;letter-spacing:.5px}.slide .meta time{font-size:13px}.slide .small,.slide .small li{font-size:18px}.slide .prompt,.slide .diy,.slide .diy p{font-size:24px}.slide pre,.slide .tiny-code pre{font-size:16px}.slide .tree{font-size:16px}.slide td,.slide table.compact td{font-size:16px}.slide th,.slide table.compact th{font-size:14px}.slide .task p{font-size:22px}.slide .task .task-number{font-size:17px}.slide .flow .step{font-size:19px}.slide .flow .step small{font-size:16px}.video-head{font-size:16px}.bash-tokens{grid-template-columns:1fr 1fr}.bash-tokens>div:last-child{grid-column:1/-1}.bash-expand,.bash-run{display:block}.bash-expand>strong,.bash-run>strong{display:block;margin-bottom:7px}.bash-branches{grid-template-columns:1fr}.bash-resolution .bash-stage{font-size:19px}.bash-resolution .bash-decision{font-size:25px}.bash-branch p,.bash-run p{font-size:20px}.bash-branch>strong{font-size:19px}.topbar .brand{font-size:13px}.controls button{font-size:15px}.footer-label,.counter{font-size:13px}.hero-bottom{gap:12px}.slide .course-updates p,.slide .session-strip{font-size:16px}}
+@media print{.video-preview iframe{display:none}.video-preview::after{content:"Video: https://youtu.be/FoIePW0b24o";display:block;font-size:12pt;padding:15px;border:1px solid var(--line)}.slide p,.slide li{font-size:13pt}.slide .small{font-size:12pt}.slide .caption,.slide .reference{font-size:11pt}.bash-branches{grid-template-columns:1fr 1fr}.bash-tokens{grid-template-columns:.65fr .9fr 2fr}.slide pre{font-size:11pt}}
+</style>
+<style id="room-layout">
+.video-preview{max-width:380px}.slide .os-flow small{font-size:16px;line-height:1.3}.slide .thanks .signature{font-size:18px}
+body.present .slide{max-width:1480px}
+@media screen and (min-width:900px){
+body.present .slide{padding:14px 24px}
+body.present .slide .meta{margin-bottom:9px}
+body.present .slide h2{margin-bottom:10px}
+body.present .slide .lead{margin-bottom:12px}
+body.present .slide p{margin-bottom:8px}
+body.present .slide .flow{margin:10px 0}
+body.present .slide .flow .step{padding:10px}
+body.present .slide .soft,body.present .slide .peach{padding:14px 16px}
+body.present .slide .space-top{margin-top:13px}
+body.present .slide .codebox{margin:6px 0 8px;padding-bottom:10px}
+body.present .slide .codebox.has-copy{padding-top:29px}
+body.present .slide td{padding:8px 10px}
+body.present .slide table.compact td{padding:6px 10px}
+body.present .slide table.compact th{padding:6px 10px}
+body.present .slide .reference{margin-top:5px;margin-bottom:0}
+body.present .slide .tree{line-height:1.45}
+body.present .slide .diy{margin-top:12px;padding:12px 18px}
+body.present .slide .diy p{margin:0}
+body.present .slide .diy p+p{margin-top:7px}
+body.present .slide .caption{margin-top:7px;margin-bottom:0}
+body.present .course-info .course-hub{margin:12px 0;padding:11px 18px}
+body.present .course-info .course-hub p{margin:4px 0 0}
+body.present .course-info .grade-part{padding:6px 7px}
+body.present .course-info .course-rules{margin:12px 0}
+body.present .course-info .course-rules p,body.present .course-info .course-support p,body.present .course-info .course-updates p,body.present .course-info .grade-heading p{margin:0}
+body.present .course-info .course-updates{padding-top:10px;margin-top:12px}
+body.present .course-info .session-strip{margin-top:10px}
+body.present #slide-3 .video-preview{max-width:330px}
+body.present .bash-resolution{padding:14px 24px}
+body.present .bash-resolution .bash-stage{margin-bottom:7px}
+body.present .bash-resolution .bash-expand{margin-bottom:10px}
+body.present .bash-resolution .bash-decision{margin-bottom:9px}
+body.present .bash-resolution .bash-run{margin:10px 0 7px}
+body.present .bash-resolution .bash-run p{margin:0}
+body.present .bash-resolution .bash-branch p{margin-bottom:7px}
+body.present #slide-23 .task-board{gap:12px 22px}
+body.present #slide-23 .task{padding-top:7px}
+body.present #slide-23 .task p{margin:0}
+body.present #slide-23 .task h3{margin-top:5px;margin-bottom:6px}
+body.present #slide-23 .callout{margin-top:10px}
+body.present #slide-23 .exercise-note{margin-top:8px;margin-bottom:0}
+}
+@media(max-width:680px){.slide .os-flow{grid-template-columns:1fr;gap:8px}.slide .os-flow .interfaces{grid-template-columns:1fr 1fr}.slide .os-flow .arrow{transform:rotate(90deg)}.slide .os-flow .system,.slide .os-flow .disk{padding:12px}.slide .os-flow small{font-size:16px}.slide .meta time{font-size:14px}.slide .meta{font-size:14px}}
+</style>
+<style id="final-room-spacing">
+@media screen and (min-width:900px){
+body.present .course-info .meta{margin-bottom:7px}
+body.present .course-info h2{margin-bottom:8px}
+body.present .course-info .course-hub{margin:8px 0}
+body.present .course-info .course-rules{margin:8px 0}
+body.present .course-info .grade-heading{margin-bottom:8px}
+body.present .course-info .course-updates{margin-top:9px}
+body.present .course-info .session-strip{margin-top:8px}
+body.present #slide-23 .task-board{gap:10px 22px}
+body.present #slide-23 .task{padding-top:6px}
+body.present #slide-23 .task h3{margin-bottom:4px}
+body.present #slide-23 .lead{margin-bottom:10px}
+}
+</style>
 <style id="print-page">@page{size:A4 landscape;margin:9mm}</style>
 </head>
 <body>
@@ -55,34 +193,36 @@ table{border-collapse:collapse;width:100%;font-size:16px}th{text-align:left;colo
 <section class="slide course-info" id="slide-2" data-section="Course essentials" data-time="01–02">
 <div class="meta"><span>Important / Course essentials</span><time>01–02 min</time></div><h2>One course hub. Keep it bookmarked.</h2>
 <div class="course-hub"><div><span class="kicker">Most important link</span><a class="hub-link" href="https://tds.s-anand.net/" target="_blank" rel="noopener">tds.s-anand.net ↗</a><p>All GA, ROE, P1 &amp; P2 links live here.</p></div><a class="policy-link" href="https://docs.google.com/document/d/e/2PACX-1vT_FeqnTq0Br4sUaN7OYAmj1B9MwjchyTEed1Bh5FkZvi5NyIMeAvvkuttostVsJBPjZcs3SjjEfiho/pub?urp=gmail_link" target="_blank" rel="noopener">Grading policy ↗</a></div>
-<div class="grade-heading"><h3>Five parts. <span>20% each.</span></h3><p>GA = graded assignments · ROE = remote online exam · P1 / P2 = projects</p></div>
+<div class="grade-heading"><h3>Five parts. <span>20% each.</span></h3><p>GA = assignments · ROE = online exam · P1 / P2 = projects</p></div>
 <div class="grade-grid" role="group" aria-label="Grade weights: GA, ROE, Project 1, Project 2, and End Term each contribute 20 percent"><div class="grade-part"><span>GA</span><strong>20%</strong><small>Average of best 7 of 9</small></div><div class="grade-part"><span>ROE</span><strong>20%</strong><small>Remote online exam</small></div><div class="grade-part"><span>P1</span><strong>20%</strong><small>Project 1</small></div><div class="grade-part"><span>P2</span><strong>20%</strong><small>Project 2</small></div><div class="grade-part"><span>End term</span><strong>20%</strong><small>Offline exam centres</small></div></div>
 <div class="course-rules"><div><span>End-term eligibility (ETE)</span><p>Average of <strong>best 2 of the first 4 GAs ≥ 40</strong>.</p></div><div><span>To receive a course grade</span><p>You <strong>must attend the end-term exam</strong>.</p></div></div>
-<div class="course-support"><div><h3>GA · ROE · P1 · P2</h3><p><strong>No proctoring.</strong> AI / LLM use is encouraged.</p></div><div><h3>Resources &amp; people</h3><p>YouTube, Discourse, TAs, faculty &amp; instructors: find resources and Discourse / email contacts on the course hub.</p></div></div>
+<div class="course-support"><div><h3>GA · ROE · P1 · P2</h3><p><strong>No proctoring.</strong> AI / LLM use is encouraged.</p></div><div><h3>Resources &amp; people</h3><p>YouTube &amp; Discourse resources; TA, faculty &amp; instructor contacts via Discourse / email. Find them on the course hub.</p></div></div>
 <div class="course-updates"><p><strong>Announcements &amp; changes</strong> → Email or Discourse</p><p><strong>Optional bonus marks</strong> → Notified by email</p></div>
 <nav class="session-strip" aria-label="Lesson chapters"><span>Today</span><a href="#slide-3">Useful tasks</a><span aria-hidden="true">→</span><a href="#slide-6">Linux &amp; WSL</a><span aria-hidden="true">→</span><a href="#slide-9">Bash &amp; paths</a><span aria-hidden="true">→</span><a href="#slide-14">Scripts</a><span aria-hidden="true">→</span><a href="#slide-18">Setup</a><span aria-hidden="true">→</span><a href="#slide-22">Practice</a></nav>
 </section>
 <!-- 03 · Subtitles -->
-<section class="slide" id="slide-3" data-section="Useful tasks" data-time="02–05">
+<section class="slide exercise-slide" id="slide-3" data-section="Useful tasks" data-time="02–05">
 <div class="meta"><span>01 / Useful tasks</span><time>02–05 min</time></div><h2>A video → a useful transcript.</h2>
-<div class="grid wide-left"><div><div class="prompt-label">Ask AI</div><p class="prompt">“Download this video’s English auto-subtitles with yt-dlp. Skip the video.”</p><div class="codebox"><pre><code>yt-dlp \
+<div class="prompt-label">Ask AI</div><p class="prompt">“Use yt-dlp to download this video’s English auto-subtitles. Skip the video.”</p>
+<div class="grid wide-left align"><div><div class="codebox"><pre><code>yt-dlp \
   --skip-download \
   --write-auto-subs \
   --sub-langs en \
   --sleep-subtitles 60 \
-  "https://youtu.be/FoIePW0b24o"</code></pre></div><p class="small">Result: a caption file, if English auto-captions exist.<br><code>--sleep-subtitles 60</code> waits 60 seconds before each subtitle download.</p></div><div><svg class="diagram" viewBox="0 0 390 238" role="img" aria-labelledby="subs-title"><title id="subs-title">Video captions become structured study material</title><rect x="15" y="16" width="156" height="92" rx="9" class="dark"/><path d="M77 43L77 83L110 63Z" fill="#fff"/><text x="194" y="63" font-size="25" class="accent">→</text><rect x="244" y="16" width="116" height="92" rx="9" class="node"/><text x="302" y="58" text-anchor="middle" font-size="19" class="mono">.vtt</text><text x="302" y="84" text-anchor="middle" font-size="12" class="muted">caption file</text><path d="M302 118V147H194" class="line"/><rect x="21" y="153" width="338" height="65" rx="9" class="paper"/><text x="41" y="178" font-size="12" class="accent">GIVE THE TRANSCRIPT TO AN AI ASSISTANT</text><text x="41" y="201" font-size="16">Notes · topics · practice questions</text></svg><div class="diy"><b>Try it yourself</b>Use a playlist URL. Ask an AI assistant to turn the captions into structured notes, topics and a mock exam. Check the notes against the source.</div><p class="small space-top">Also ask: “How do I install yt-dlp on macOS?” and “Give me a command to download this video.”</p></div></div>
+  "https://youtu.be/FoIePW0b24o"</code></pre></div><p class="small">Result: a caption file, if English auto-captions exist.<br><code>--sleep-subtitles 60</code> waits 60 seconds before each subtitle download.</p></div><div><figure class="video-preview"><figcaption class="video-head"><strong>Subtitle demo video</strong><a href="https://youtu.be/FoIePW0b24o" target="_blank" rel="noopener">YouTube ↗</a></figcaption><iframe src="https://www.youtube-nocookie.com/embed/FoIePW0b24o" title="YouTube video used in the English subtitle demo" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></figure></div></div>
+<div class="diy"><b>Try it yourself</b><p>Download a playlist’s captions → ask AI for topics, notes and a mock exam. Check them against the video.</p><p class="exercise-extra">Also ask: “How do I install yt-dlp on macOS?” and “Give me a command to download this video.”</p></div>
 <p class="reference"><a href="https://github.com/yt-dlp/yt-dlp#usage-and-options" target="_blank" rel="noopener">yt-dlp documentation</a></p>
 </section>
 <!-- 04 · PDF -->
-<section class="slide" id="slide-4" data-section="Useful tasks" data-time="05–07">
+<section class="slide exercise-slide" id="slide-4" data-section="Useful tasks" data-time="05–07">
 <div class="meta"><span>01 / Useful tasks</span><time>05–07 min</time></div><h2>Keep only the PDF pages you need.</h2><div class="prompt-label">Ask AI</div><p class="prompt">“Keep pages 2 to 4 of demo.pdf in a new PDF. Give me a Bash command.”</p>
 <div class="pdf-selection" role="img" aria-label="demo.pdf contains pages 1 to 5. Select pages 2, 3 and 4 to create selected.pdf with three pages; the original is unchanged."><div><div class="page-strip"><span class="page-box">1</span><span class="page-box chosen">2</span><span class="page-box chosen">3</span><span class="page-box chosen">4</span><span class="page-box">5</span></div><p class="caption">demo.pdf · unchanged</p></div><span class="arrow">→</span><div><div class="page-strip"><span class="page-box chosen">2</span><span class="page-box chosen">3</span><span class="page-box chosen">4</span></div><p class="caption">selected.pdf · 3 pages</p></div></div>
 <div class="codebox"><pre><code>qpdf demo.pdf --pages . 2-4 -- selected.pdf</code></pre></div><p class="small"><code>2-4</code> includes both endpoints. Here <code>.</code> means “use the input PDF” for qpdf’s page selection.</p>
-<div class="diy"><b>Try it yourself · a private document</b>For your own eAadhaar, ask: “Suggest a safe, open-source local tool to create an unlocked PDF using my known password. Show a private password-input method in Bash.” Keep the PDF and password on your computer; send only the task description to AI.</div>
+<div class="diy"><b>Try it yourself · a private document</b><p>Ask AI: “Suggest an open-source Bash tool to unlock my own eAadhaar with a known password. Show private password input.”</p><p class="exercise-note">Keep the PDF and password on your computer. Send only the task description to AI.</p></div>
 <p class="reference"><a href="https://qpdf.readthedocs.io/en/stable/cli.html" target="_blank" rel="noopener">qpdf command-line guide</a></p>
 </section>
 <!-- 05 · Image -->
-<section class="slide" id="slide-5" data-section="Useful tasks" data-time="07–09">
+<section class="slide exercise-slide" id="slide-5" data-section="Useful tasks" data-time="07–09">
 <div class="meta"><span>01 / Useful tasks</span><time>07–09 min</time></div><h2>A smaller image, in one command.</h2><div class="grid align"><div><div class="prompt-label">Ask AI</div><p class="prompt">“Compress photo.jpg as a new JPEG with ImageMagick. Keep the original.”</p><div class="codebox"><pre><code>magick photo.jpg -quality 75 photo-small.jpg</code></pre></div><p class="small">ImageMagick 7 uses <code>magick</code>. If your system provides ImageMagick 6, use <code>convert</code> instead.</p><p class="small">Open both files and compare with <code>ls -lh photo*.jpg</code>. JPEG compression trades some detail for size; the actual saving varies.</p></div><div><svg class="diagram" viewBox="0 0 420 260" role="img" aria-labelledby="image-title"><title id="image-title">An original landscape image and its compressed copy</title><defs><clipPath id="photo-clip"><rect x="15" y="25" width="210" height="165" rx="9"/></clipPath><clipPath id="small-photo-clip"><rect x="277" y="70" width="127" height="100" rx="7"/></clipPath></defs><g clip-path="url(#photo-clip)"><rect x="15" y="25" width="210" height="165" fill="#dceae9"/><circle cx="174" cy="62" r="19" fill="#e8b16e"/><path d="M15 169L72 76L135 155L166 117L235 197H15Z" fill="#83aca1"/><path d="M15 187L90 122L157 174L210 150L225 201H15Z" fill="#307f70"/></g><text x="120" y="222" text-anchor="middle" font-size="16" class="mono">photo.jpg</text><text x="120" y="246" text-anchor="middle" font-size="12" class="muted">original stays available</text><text x="250" y="129" text-anchor="middle" font-size="28" class="accent">→</text><g clip-path="url(#small-photo-clip)"><rect x="277" y="70" width="127" height="100" fill="#dceae9"/><circle cx="373" cy="93" r="12" fill="#e8b16e"/><path d="M277 157L309 98L349 149L368 126L405 176H277Z" fill="#83aca1"/><path d="M277 170L321 125L363 157L404 143L410 181H277Z" fill="#307f70"/></g><text x="341" y="201" text-anchor="middle" font-size="13" class="mono">photo-small.jpg</text><text x="341" y="224" text-anchor="middle" font-size="12" class="muted">illustrative size comparison</text></svg></div></div>
 <div class="diy"><b>Try it yourself</b>“Resize to fit within 1200 × 800 pixels, set 150 DPI metadata, and compress to JPEG quality 75. Explain how to get exact dimensions without distorting the image.”<br><span class="small">Pixel dimensions control screen size. DPI metadata describes print density.</span></div>
 <p class="reference"><a href="https://imagemagick.org/script/command-line-options.php#quality" target="_blank" rel="noopener">ImageMagick options</a></p>
@@ -119,7 +259,7 @@ D:\  <span class="comment">(another drive, if present)</span></pre></div><div><h
 <section class="slide" id="slide-8" data-section="Linux & WSL" data-time="15–18">
 <div class="meta"><span>02 / Meet your system</span><time>15–18 min</time></div><h2>Enable WSL. Open Ubuntu. Start there.</h2>
 <div class="grid"><div><h3><a href="https://learn.microsoft.com/en-us/windows/wsl/install" target="_blank" rel="noopener">Official WSL setup ↗</a></h3><ol class="list"><li>Use Windows 11, or supported Windows 10 (2004 / build 19041 or later).</li><li>Open <strong>PowerShell as Administrator</strong>.</li></ol><div class="codebox"><pre><code>wsl --install -d Ubuntu</code></pre></div><p class="small">This enables the required WSL features and installs Ubuntu. Restart if prompted, open Ubuntu, then create a Linux username and password.</p><div class="callout">Type <code>sudo apt …</code> inside <strong>Ubuntu</strong>. Type <code>wsl …</code> in <strong>PowerShell</strong>.</div></div><div><h3><a href="https://learn.microsoft.com/en-us/windows/wsl/basic-commands" target="_blank" rel="noopener">Manage WSL ↗</a></h3><table class="compact"><thead><tr><th>PowerShell command</th><th>Action</th></tr></thead><tbody><tr><td><code>wsl -l -v</code></td><td>Installed distros + WSL version</td></tr><tr><td><code>wsl --list --online</code></td><td>Available distro names</td></tr><tr><td><code>wsl --install -d Ubuntu</code></td><td>Install a named distro</td></tr><tr><td><code>wsl -d Ubuntu</code></td><td>Open that distro</td></tr><tr><td><code>wsl --update</code></td><td>Update WSL itself</td></tr><tr><td><code>wsl --shutdown</code></td><td>Stop running WSL environments</td></tr></tbody></table><details><summary>Remove a distro · deletes its Linux files</summary><p><code>wsl --unregister Ubuntu</code> permanently deletes Ubuntu’s WSL filesystem and settings. Back up its files first. This is a reference command, not a setup step.</p></details></div></div>
-<p class="small space-top">Already on Ubuntu or Fedora? Use your native terminal. A Linux password shows no characters while you type.</p>
+<p class="question-text space-top">Already on Ubuntu or Fedora? Use your native terminal. A Linux password shows no characters while you type.</p>
 </section>
 <!-- 09 · First commands -->
 <section class="slide" id="slide-9" data-section="Bash & paths" data-time="18–21">
@@ -138,33 +278,45 @@ sudo dnf upgrade --refresh</code></pre></div><ul class="clean small"><li><strong
 <div class="callout"><code>ls my files</code> passes <strong>two</strong> names. <code>ls "my files"</code> passes <strong>one</strong>.</div><p class="small space-top"><strong>Tab</strong> completes names · <strong>↑</strong> recalls commands · <strong>Ctrl+C</strong> interrupts a running command · <code>ls --help</code> explains options.</p>
 </section>
 <!-- 11 · Resolution -->
-<section class="slide" id="slide-11" data-section="Bash & paths" data-time="23–26">
-<div class="meta"><span>03 / Read the command</span><time>23–26 min</time></div><h2>What happens after you press Enter?</h2><p class="lead">Bash reads the syntax. The selected program interprets its own options.</p>
-<div class="flow" role="img" aria-label="Bash reads and separates command words, expands variables and sets redirections, resolves a command, then launches the tool"><div class="step">Read the line<small>words, quotes, operators</small></div><span class="arrow">→</span><div class="step">Expand &amp; connect<small>variables, paths, redirects</small></div><span class="arrow">→</span><div class="step dark">Find the command<small>builtin or program</small></div><span class="arrow">→</span><div class="step">Run the tool<small>pass its arguments</small></div></div>
-<div class="grid"><div><div class="codebox"><pre><code>ls -lh "$HOME/linux-day1/notes"</code></pre></div><ul class="clean small"><li><code>ls</code> is the command name.</li><li><code>$HOME</code> expands; quotes keep the path in one argument.</li><li>Bash locates <code>ls</code>; <code>ls</code> reads <code>-lh</code> and the directory.</li></ul></div><div class="soft"><div class="kicker">For an external name like ls, curl or git</div><p class="small">After checking shell functions and builtins, Bash uses its cached location or searches the folders in <code>PATH</code>.</p><div class="flow"><div class="step"><code>~/.local/bin</code><small>search</small></div><span class="arrow">→</span><div class="step"><code>/usr/bin</code><small>executable found</small></div></div><p class="small" style="margin:0">Example resolution: <code>/usr/bin/ls</code>. Check yours with <code>command -v ls</code>.</p></div></div>
-<p class="caption"><code>git ./</code> still resolves <code>git</code> through PATH. <code>./</code> is an argument; Git expects a subcommand such as <code>git status</code>.</p>
-<p class="reference"><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Operation.html" target="_blank" rel="noopener">Bash shell operation</a><a href="https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html" target="_blank" rel="noopener">Command lookup</a></p>
+<section class="slide bash-resolution" id="slide-11" data-section="Bash &amp; paths" data-time="23–26">
+<div class="meta"><span>03 / Read the command</span><time>23–26 min</time></div><h2>Enter → tokens → command → execution.</h2>
+<p class="bash-stage"><strong>01 · Tokenize</strong> Split into words and operators. Quotes keep text together.</p>
+<div class="bash-tokens" role="group" aria-label="The command line splits into three words"><div><code>ls</code><span>Command word</span></div><div><code>-lh</code><span>Option argument</span></div><div><code>"$HOME/linux-day1/notes"</code><span>One path argument</span></div></div>
+<div class="bash-expand"><strong>02 · Expand</strong><span><code>$HOME</code> → <code>/home/student</code>. The quoted path stays one argument.</span></div>
+<h3 class="bash-decision">03 · Does the command word contain <code>/</code>?</h3>
+<div class="bash-branches"><div class="bash-branch path-branch"><div class="branch-heading"><span>YES → use that path</span></div><p><code>/usr/bin/ls</code> → absolute: start at <code>/</code>.<br><code>./hello.sh</code>, <code>../hello.sh</code>, <code>bin/tool</code> → relative: start here.</p><strong>Run the named file. Skip PATH lookup.</strong></div><div class="bash-branch name-branch"><div class="branch-heading"><span>NO → look up the name</span></div><p><code>ls</code>, <code>git</code>, <code>myscript</code>, <code>.hidden</code></p><div class="name-search"><span>Function</span><span aria-hidden="true">→</span><span>Builtin</span><span aria-hidden="true">→</span><span>Cache / PATH</span></div><strong>Search PATH left to right; run the match.</strong></div></div>
+<div class="bash-run"><strong>04 · Run</strong><p>For our example, Bash starts <code>ls</code> with <code>-lh</code> and the expanded path. <strong>ls</strong> interprets its options and lists that directory.</p></div>
+<p class="caption">The rule is <strong>a slash anywhere</strong>, not “starts with a dot”. Operators such as <code>|</code> and <code>&gt;</code> are shell syntax, not tool arguments.</p>
+<p class="reference"><a href="https://www.gnu.org/software/bash/manual/html_node/Shell-Operation.html" target="_blank" rel="noopener">Bash tokenization</a><a href="https://www.gnu.org/software/bash/manual/html_node/Command-Search-and-Execution.html" target="_blank" rel="noopener">Command lookup</a></p>
 </section>
 <!-- 12 · Paths -->
 <section class="slide" id="slide-12" data-section="Bash & paths" data-time="26–29">
-<div class="meta"><span>03 / Read the command</span><time>26–29 min</time></div><h2>One file. Different ways to reach it.</h2><p class="lead">Assume you are in <code>/home/student/linux-day1</code>.</p>
-<div class="grid wide-left"><div><table class="compact"><thead><tr><th>Path</th><th>Start here</th></tr></thead><tbody><tr><td><code>/home/student/linux-day1/notes/today.txt</code></td><td>Root <code>/</code> · absolute</td></tr><tr><td><code>notes/today.txt</code></td><td>Current directory · relative</td></tr><tr><td><code>./notes/today.txt</code></td><td>Current directory · relative</td></tr><tr><td><code>../report.txt</code></td><td>Parent directory · relative</td></tr><tr><td><code>~/linux-day1/notes/today.txt</code></td><td>Home · <code>~</code> expands</td></tr><tr><td><code>"$HOME/linux-day1/notes/today.txt"</code></td><td>Home · variable expands</td></tr></tbody></table></div><div class="soft"><div class="kicker">Two rules, after expansion</div><h3>Starts with <code>/</code>?</h3><p>Absolute. Begin at the filesystem root.</p><h3>Doesn’t start with <code>/</code>?</h3><p>Relative. Begin at the current working directory.</p><p class="small" style="margin-bottom:0"><code>~</code> and <code>$HOME</code> are shortcuts that expand to your home’s absolute path. A quoted <code>"~"</code> does not expand.</p></div></div>
+<div class="meta"><span>03 / Read the command</span><time>26–29 min</time></div><h2>Paths: absolute, relative and home.</h2><p class="lead">Assume you are in <code>/home/student/linux-day1</code>.</p>
+<div class="grid wide-left"><div><table class="compact"><thead><tr><th>Path</th><th>Start here</th></tr></thead><tbody><tr><td><code>/home/student/linux-day1/notes/today.txt</code></td><td>Root <code>/</code> · absolute</td></tr><tr><td><code>notes/today.txt</code></td><td>Current directory · relative</td></tr><tr><td><code>../report.txt</code></td><td>Parent directory · relative</td></tr><tr><td><code>~/linux-day1/notes/today.txt</code></td><td>Home · <code>~</code> expands</td></tr><tr><td><code>"$HOME/linux-day1/notes/today.txt"</code></td><td>Home · variable expands</td></tr></tbody></table></div><div class="soft"><div class="kicker">Two rules, after expansion</div><h3 class="question-heading">Starts with <code>/</code>?</h3><p>Absolute. Begin at the filesystem root.</p><h3 class="question-heading">Doesn’t start with <code>/</code>?</h3><p>Relative. Begin at the current working directory.</p><p class="small" style="margin-bottom:0"><code>~</code> and <code>$HOME</code> are shortcuts that expand to your home’s absolute path. A quoted <code>"~"</code> does not expand.</p></div></div>
 <div class="flow"><div class="step"><code>/</code><small>root</small></div><span class="arrow">→</span><div class="step"><code>home/student</code><small>home</small></div><span class="arrow">→</span><div class="step dark"><code>linux-day1</code><small>you are here</small></div><span class="arrow">→</span><div class="step"><code>notes/today.txt</code><small>relative route</small></div></div>
-<p class="small"><code>.</code> = current directory · <code>..</code> = parent · <code>cd ..</code> moves here to <code>/home/student</code>.</p>
+<p class="small"><code>.</code> = current directory (<code>./notes/today.txt</code> is also relative) · <code>..</code> = parent.</p>
 </section>
 <!-- 13 · Slash versus PATH -->
 <section class="slide" id="slide-13" data-section="Bash & paths" data-time="29–31">
 <div class="meta"><span>03 / Read the command</span><time>29–31 min</time></div><h2><code>./myscript</code> or <code>myscript</code>?</h2><p class="lead">Bash treats the first word as the command. A slash changes how it finds that command.</p>
-<div class="grid"><div><span class="tag">A command path contains /</span><div class="codebox"><pre><code>./myscript</code></pre></div><div class="flow vertical"><div class="step">Use this relative path<small>current folder + myscript</small></div><span class="arrow">↓</span><div class="step dark">Run that file<small>PATH lookup is skipped</small></div></div><p class="small">The file must exist and be executable; any required interpreter must be available.</p></div><div><span class="tag">A command name contains no /</span><div class="codebox"><pre><code>myscript</code></pre></div><div class="flow vertical"><div class="step">Look up the command name<small>functions, builtins, then PATH</small></div><span class="arrow">↓</span><div class="step dark">Run the resolved command<small>or report “command not found”</small></div></div><p class="small">The current folder is usually absent from PATH. A local file alone is not enough.</p></div></div>
+<div class="grid"><div><span class="tag">Contains / → explicit path</span><div class="codebox"><pre><code>./myscript</code></pre></div><div class="flow"><div class="step dark">This folder → myscript<small>Run this file. Skip PATH lookup.</small></div></div><p class="small">The file must exist, be executable, and have an available interpreter.</p></div><div><span class="tag">No / → command-name lookup</span><div class="codebox"><pre><code>myscript</code></pre></div><div class="flow"><div class="step dark">Function → builtin → PATH<small>Run the match, or report “command not found”.</small></div></div><p class="small">The current folder is usually absent from PATH. Even <code>.myscript</code> is a name; use <code>./.myscript</code> to run that local file.</p></div></div>
 <div class="callout"><code>bash ./myscript</code> resolves <strong>Bash</strong> as the command; <code>./myscript</code> is its file argument. Bash reads the script, so the script itself needn’t have execute permission.</div>
 </section>
 <!-- 14 · Streams -->
-<section class="slide" id="slide-14" data-section="Pipes & scripts" data-time="31–34">
-<div class="meta"><span>04 / Connect the pieces</span><time>31–34 min</time></div><h2>Give input. Route output. Keep errors.</h2>
+<section class="slide" id="slide-14" data-section="Pipes &amp; scripts" data-time="31–32">
+<div class="meta"><span>04 / Connect the pieces</span><time>31–32 min</time></div><h2>Choose where the streams go.</h2>
 <div class="flow streams" role="img" aria-label="Standard input stream 0 goes into a program. The program produces standard output stream 1 and standard error stream 2."><div class="step"><code>stdin · 0</code><small>keyboard or file input</small></div><span class="arrow">→</span><div class="step dark">Program<small>does the work</small></div><span class="arrow">→</span><div class="outputs"><div class="step"><code>stdout · 1</code><small>normal output</small></div><div class="step"><code>stderr · 2</code><small>errors / diagnostics</small></div></div></div>
-<div class="grid"><table class="compact"><thead><tr><th>Write</th><th>Meaning</th></tr></thead><tbody><tr><td><code>cmd &gt; out.txt</code></td><td>Write stdout; replace existing content</td></tr><tr><td><code>cmd &gt;&gt; out.txt</code></td><td>Append stdout to the file</td></tr><tr><td><code>cmd &lt; input.txt</code></td><td>Read stdin from a file</td></tr><tr><td><code>cmd 2&gt; errors.txt</code></td><td>Write stderr; <code>2&gt;&gt;</code> appends it</td></tr><tr><td><code>cmd &gt; all.txt 2&gt;&amp;1</code></td><td>Send both streams into one file</td></tr></tbody></table><table class="compact"><thead><tr><th>Write</th><th>Meaning</th></tr></thead><tbody><tr><td><code>cmd &amp;&gt; all.txt</code></td><td>Bash shortcut for both; <code>&amp;&gt;&gt;</code> appends</td></tr><tr><td><code>cmd &gt; /dev/null</code></td><td>Discard stdout; errors still appear</td></tr><tr><td><code>cmd1 | cmd2</code></td><td>Send stdout to the next program’s stdin</td></tr><tr><td><code>cmd1 |&amp; cmd2</code></td><td>Bash: pipe stdout and stderr</td></tr><tr><td><code>cmd &lt;&lt; EOF</code> / <code>&lt;&lt;&lt; "text"</code></td><td>Input from a here-document / here-string</td></tr></tbody></table></div>
-<div class="codebox"><pre><code>printf 'apple\nbanana\napple\n' | grep "apple" | wc -l</code></pre></div><p class="small">Create three lines, select the matching ones, then count them: <strong>2</strong>. Redirect order matters: <code>&gt; all.txt 2&gt;&amp;1</code> differs from <code>2&gt;&amp;1 &gt; all.txt</code>.</p>
+<table class="compact"><thead><tr><th>Bash syntax</th><th>What changes</th></tr></thead><tbody><tr><td><code>cmd &gt; out.txt</code></td><td>Write stdout into a file; replace existing content.</td></tr><tr><td><code>cmd &gt;&gt; out.txt</code></td><td>Append stdout to the file.</td></tr><tr><td><code>cmd &lt; input.txt</code></td><td>Read stdin from a file instead of the keyboard.</td></tr><tr><td><code>cmd 2&gt; errors.txt</code></td><td>Save stderr separately. <code>2&gt;&gt;</code> appends errors.</td></tr><tr><td><code>cmd &gt; all.txt 2&gt;&amp;1</code></td><td>Send stdout to the file, then send stderr to the same place.</td></tr></tbody></table>
+<div class="callout"><strong>Bash connects the streams.</strong> The tool performs the task; the shell decides where its input and output go.</div>
 <p class="reference"><a href="https://www.gnu.org/software/bash/manual/html_node/Redirections.html" target="_blank" rel="noopener">Bash redirections</a></p>
+</section>
+<section class="slide" id="slide-14b" data-section="Pipes &amp; scripts" data-time="32–34">
+<div class="meta"><span>04 / Connect the pieces</span><time>32–34 min</time></div><h2>A pipe sends data to the next tool.</h2>
+<div class="flow" role="img" aria-label="printf creates three lines; grep selects apple lines; wc counts two selected lines"><div class="step"><code>printf</code><small>create three lines</small></div><span class="arrow">→</span><div class="step"><code>grep apple</code><small>keep matching lines</small></div><span class="arrow">→</span><div class="step dark"><code>wc -l</code><small>count them → 2</small></div></div>
+<div class="codebox"><pre><code>printf 'apple\nbanana\napple\n' | grep "apple" | wc -l</code></pre></div>
+<table class="compact"><thead><tr><th>Useful Bash forms</th><th>Meaning</th></tr></thead><tbody><tr><td><code>cmd1 | cmd2</code></td><td>stdout of the first → stdin of the second.</td></tr><tr><td><code>cmd1 |&amp; cmd2</code></td><td>Pipe both stdout and stderr.</td></tr><tr><td><code>cmd &amp;&gt; all.txt</code></td><td>Save both streams; <code>&amp;&gt;&gt;</code> appends them.</td></tr><tr><td><code>cmd &gt; /dev/null</code></td><td>Discard stdout. Errors still appear.</td></tr><tr><td><code>cmd &lt;&lt; EOF</code> / <code>&lt;&lt;&lt; "text"</code></td><td>Input from a here-document / here-string.</td></tr></tbody></table>
+<p class="small">Order matters: <code>&gt; all.txt 2&gt;&amp;1</code> differs from <code>2&gt;&amp;1 &gt; all.txt</code>. A pipe carries output; <code>&amp;&amp;</code> checks success (next slide).</p>
+<p class="reference"><a href="https://www.gnu.org/software/bash/manual/html_node/Pipelines.html" target="_blank" rel="noopener">Bash pipelines</a></p>
 </section>
 <!-- 15 · Scripts and sequencing -->
 <section class="slide" id="slide-15" data-section="Pipes & scripts" data-time="34–36">
@@ -195,8 +347,8 @@ npm --version</code></pre></div><p class="small">The first command installs Node
 <!-- 17 · Permissions -->
 <section class="slide" id="slide-17" data-section="Permissions" data-time="39–42">
 <div class="meta"><span>04 / Connect the pieces</span><time>39–42 min</time></div><h2>Permissions: add 4, 2 and 1.</h2>
-<div class="grid"><div><div class="bits" role="img" aria-label="read is 4, write is 2, execute is 1"><div class="bit"><strong>4</strong><span><code>r</code> · read</span></div><div class="bit"><strong>2</strong><span><code>w</code> · write</span></div><div class="bit"><strong>1</strong><span><code>x</code> · execute</span></div></div><div class="mode-example" role="img" aria-label="Mode 755 gives owner read write execute, group read execute, others read execute"><div><strong>7</strong><code>rwx</code><span>Owner · 4 + 2 + 1</span></div><div><strong>5</strong><code>r-x</code><span>Group · 4 + 1</span></div><div><strong>5</strong><code>r-x</code><span>Others · 4 + 1</span></div></div><p class="small">One digit per access class. <code>6 = 4 + 2</code> gives read and write; <code>0</code> gives none.</p></div><div><h3>Make your script executable</h3><div class="codebox"><pre><code>chmod +x hello.sh
-./hello.sh</code></pre></div><p class="small"><code>+x</code> adds execute permission while keeping the existing read/write bits. With no class specified, your <code>umask</code> affects which classes get it.</p><p class="small">Use <code>chmod u+x hello.sh</code> to add execution for the owner explicitly.</p><table class="compact"><tbody><tr><td><code>chmod 755 hello.sh</code></td><td>Owner can edit/run; group and others read/run</td></tr><tr><td><code>chmod 700 hello.sh</code></td><td>Only the owner gets ordinary access</td></tr><tr><td><code>chmod 644 notes.txt</code></td><td>Owner reads/writes; others read</td></tr></tbody></table></div></div>
+<div class="grid"><div><div class="bits" role="img" aria-label="read is 4, write is 2, execute is 1"><div class="bit"><strong>4</strong><span><code>r</code> · read</span></div><div class="bit"><strong>2</strong><span><code>w</code> · write</span></div><div class="bit"><strong>1</strong><span><code>x</code> · execute</span></div></div><div class="mode-example" role="img" aria-label="Mode 755 gives owner read write execute, group read execute, others read execute"><div><strong>7</strong><code>rwx</code><span>Owner · 4 + 2 + 1</span></div><div><strong>5</strong><code>r-x</code><span>Group · 4 + 1</span></div><div><strong>5</strong><code>r-x</code><span>Others · 4 + 1</span></div></div><p class="small"><code>chmod 755 hello.sh</code> sets the digits above. <code>6 = 4 + 2</code> means read/write; <code>0</code> means none.</p></div><div><h3>Make your script executable</h3><div class="codebox"><pre><code>chmod +x hello.sh
+./hello.sh</code></pre></div><p class="small"><code>+x</code> adds execution; read/write bits stay. With no class given, <code>umask</code> limits which classes receive it.</p><p class="small">Use <code>chmod u+x hello.sh</code> to add execution for the owner explicitly.</p><table class="compact"><tbody><tr><td><code>chmod 700 hello.sh</code></td><td>Only the owner gets ordinary access</td></tr><tr><td><code>chmod 644 notes.txt</code></td><td>Owner reads/writes; others read</td></tr></tbody></table></div></div>
 <div class="callout">The same step often enables a downloaded command-line script: inspect it, add the needed execute bit, then run its explicit path.</div>
 <p class="reference"><a href="https://www.gnu.org/software/coreutils/manual/html_node/Numeric-Modes.html" target="_blank" rel="noopener">Numeric permissions</a><a href="https://www.gnu.org/software/coreutils/manual/html_node/Symbolic-Modes.html" target="_blank" rel="noopener">Symbolic permissions</a></p>
 </section>
@@ -227,8 +379,8 @@ sudo apt install curl ca-certificates unzip git \
 <div class="meta"><span>05 / Set up your tools</span><time>47–49 min</time></div><h2>Finish the subtitle-tool setup.</h2><p class="lead">Same user-level commands on Ubuntu and Fedora. No <code>sudo</code> here.</p>
 <div class="grid"><div><h3><a href="https://docs.astral.sh/uv/getting-started/installation/" target="_blank" rel="noopener">uv · official installation ↗</a></h3><div class="codebox"><pre><code>curl -LsSf https://astral.sh/uv/install.sh | sh
 export PATH="$HOME/.local/bin:$PATH"
-uv tool install "yt-dlp[default]"</code></pre></div><p class="small">uv installs Python tools in their own environments. yt-dlp’s default extras include its JavaScript challenge support.</p><p class="small">Follow the installer’s printed path if your installation uses a custom location.</p></div><div><h3><a href="https://docs.deno.com/runtime/getting_started/installation/" target="_blank" rel="noopener">Deno · official installation ↗</a></h3><div class="codebox"><pre><code>curl -fsSL https://deno.land/install.sh | sh
-export PATH="$HOME/.deno/bin:$PATH"</code></pre></div><p class="small">Deno supplies a supported JavaScript runtime for full YouTube support. yt-dlp discovers Deno by default.</p><p class="small">The installer needs <code>unzip</code>, included in our package list. Installers execute downloaded scripts; read the official instructions.</p></div></div>
+uv tool install "yt-dlp[default]"</code></pre></div><p class="small">uv isolates Python tools. yt-dlp’s default extras include JavaScript challenge support. For a custom installation, use the installer’s printed path.</p></div><div><h3><a href="https://docs.deno.com/runtime/getting_started/installation/" target="_blank" rel="noopener">Deno · official installation ↗</a></h3><div class="codebox"><pre><code>curl -fsSL https://deno.land/install.sh | sh
+export PATH="$HOME/.deno/bin:$PATH"</code></pre></div><p class="small">Deno is auto-detected by yt-dlp for YouTube support. Its installer needs <code>unzip</code> (already installed). These commands execute the official downloaded scripts.</p></div></div>
 <div class="codebox"><pre><code>uv --version       # Python tool manager
 yt-dlp --version   # subtitle downloader
 deno --version     # JavaScript runtime</code></pre></div><p class="small">Reopen Bash to load startup changes. Later, update this yt-dlp installation with <code>uv tool upgrade yt-dlp</code>.</p>
@@ -253,10 +405,10 @@ printf '%s\n' "$JAVA_HOME"</code></pre></div><p class="small">For future Bash se
 <p class="small">While WSL installs, start at Level 01. Follow each resource’s own instructions.</p>
 </section>
 <!-- 23 · Consolidated tasks -->
-<section class="slide" id="slide-23" data-section="Practice" data-time="53–59">
+<section class="slide exercise-slide" id="slide-23" data-section="Practice" data-time="53–59">
 <div class="meta"><span>06 / Try it yourself</span><time>53–59 min</time></div><h2>Pick one mission. Show the result.</h2><p class="lead">Start one task now. Use the rest as practice after the session.</p>
-<div class="task-board"><article class="task"><span class="task-number">MISSION 01 / STUDY</span><h3>A playlist → study notes</h3><p>Download English captions for a playlist. Ask AI for topics, structured notes and a mock exam. Check a sample against the video.</p></article><article class="task"><span class="task-number">MISSION 02 / MEDIA</span><h3>Install &amp; download</h3><p>Ask how to install yt-dlp on macOS. Ask for a video-download command; explain its options and locate the output file.</p></article><article class="task"><span class="task-number">MISSION 03 / PRIVATE PDF</span><h3>Process it locally</h3><p>Keep selected pages from a sample PDF. For your own eAadhaar, use a local open-source tool and a known password to create an unlocked copy.</p></article><article class="task"><span class="task-number">MISSION 04 / IMAGE</span><h3>Resize, DPI, compress</h3><p>Create a JPEG exactly 800 × 600 pixels at 150 DPI metadata, quality 75. Ask for cropping or padding to preserve proportions. Keep the original.</p></article><article class="task"><span class="task-number">MISSION 05 / BASH</span><h3>A script you can run</h3><p>Create <code>hello.sh</code>. Add owner execute permission, run <code>./hello.sh</code>, then explain why <code>hello.sh</code> alone may fail.</p></article><article class="task"><span class="task-number">MISSION 06 / SETUP</span><h3>Make a tool discoverable</h3><p>Install a tool, find its directory, add it to PATH and persist the setting in <code>~/.bashrc</code>. Reopen Bash and check its version.</p></article></div>
-<div class="callout"><strong>Show three things:</strong> the command, its output or created file, and the check that proves it worked.</div><p class="small space-top">For help: tell AI your OS, shell, exact command and exact error. Keep private files and passwords local.</p>
+<div class="task-board"><article class="task"><span class="task-number">MISSION 01 / STUDY</span><h3>A playlist → study notes</h3><p>Download a playlist’s English captions. Use AI for topics, structured notes and a mock exam. Check a sample against the video.</p></article><article class="task"><span class="task-number">MISSION 02 / MEDIA</span><h3>Install &amp; download</h3><p>Ask AI how to install yt-dlp on macOS, then download a video. Explain the options and find the output.</p></article><article class="task"><span class="task-number">MISSION 03 / PRIVATE PDF</span><h3>Process it locally</h3><p>Select pages from a sample PDF. Unlock your own eAadhaar locally with an open-source tool and its known password.</p></article><article class="task"><span class="task-number">MISSION 04 / IMAGE</span><h3>Resize, DPI, compress</h3><p>Create an 800 × 600 JPEG with 150 DPI metadata and quality 75. Crop or pad to preserve proportions; keep the original.</p></article><article class="task"><span class="task-number">MISSION 05 / BASH</span><h3>A script you can run</h3><p>Create <code>hello.sh</code>. Add owner execute permission and run <code>./hello.sh</code>. Explain why <code>hello.sh</code> alone may fail.</p></article><article class="task"><span class="task-number">MISSION 06 / SETUP</span><h3>Make a tool discoverable</h3><p>Install a tool. Add its directory to PATH and save the setting in <code>~/.bashrc</code>. Reopen Bash and check its version.</p></article></div>
+<div class="callout"><strong>Show three things:</strong> the command, its output or created file, and the check that proves it worked.</div><p class="exercise-note space-top">For help: tell AI your OS, shell, exact command and exact error. Keep private files and passwords local.</p>
 </section>
 <!-- 24 · End -->
 <section class="slide thanks" id="slide-24" data-section="Thank you" data-time="59–60">
@@ -265,7 +417,7 @@ printf '%s\n' "$JAVA_HOME"</code></pre></div><p class="small">For future Bash se
 <p class="signature">Hritik Roshan Maurya · Linux &amp; the command line</p><p class="small">Next: finish one mission and try the first few CMD Challenge levels.</p><p class="reference"><a href="#slide-23">Back to the missions</a><a href="#slide-2">Back to the session map</a></p>
 </section>
 </main>
-<footer class="bottombar only-js"><span class="footer-label" id="footer-label">Introduction</span><div class="nav"><span class="key-hint">← → navigate · V view · F fullscreen</span><button id="prev" type="button" aria-label="Previous slide">←</button><span class="counter" id="counter" aria-live="polite" aria-atomic="true">1 / 24</span><button id="next" type="button" aria-label="Next slide">→</button></div></footer><div id="progress" class="progress only-js" aria-hidden="true"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
+<footer class="bottombar only-js"><span class="footer-label" id="footer-label">Introduction</span><div class="nav"><span class="key-hint">← → navigate · V view · F fullscreen</span><button id="prev" type="button" aria-label="Previous slide">←</button><span class="counter" id="counter" aria-live="polite" aria-atomic="true">1 / 25</span><button id="next" type="button" aria-label="Next slide">→</button></div></footer><div id="progress" class="progress only-js" aria-hidden="true"></div><div id="toast" class="toast" role="status" aria-live="polite"></div>
 <script>
 (() => {
 'use strict';
@@ -282,7 +434,7 @@ let current = 0, reading = false, scrollPending = false, scrollLock = false;
 let toastTimer, lockTimer;
 const viewKey = 'linux-day1-clean-view';
 function notify(message) { clearTimeout(toastTimer); toast.textContent = message; toastTimer = setTimeout(() => { toast.textContent = ''; }, 2600); }
-function hashIndex() { const match = location.hash.match(/^#(?:slide-)?(\d+)$/); return match ? Math.max(0, Math.min(slides.length - 1, Number(match[1]) - 1)) : 0; }
+function hashIndex() { const exact = slides.findIndex(slide => '#' + slide.id === location.hash); if (exact >= 0) return exact; const match = location.hash.match(/^#(\d+)$/); return match ? Math.max(0, Math.min(slides.length - 1, Number(match[1]) - 1)) : 0; }
 function updateURL() { const url = new URL(location.href); url.hash = slides[current].id; try { history.replaceState(null, '', url); } catch {} }
 function updateNavigation() {
  counter.textContent = `${current + 1} / ${slides.length}`;
@@ -316,7 +468,7 @@ fullscreenButton.addEventListener('click', async () => {
 });
 document.addEventListener('fullscreenchange', () => { const full = Boolean(document.fullscreenElement); fullscreenButton.textContent = full ? 'Exit fullscreen' : 'Fullscreen'; fullscreenButton.setAttribute('aria-label', full ? 'Exit fullscreen' : 'Enter fullscreen'); });
 document.querySelectorAll('a[href^="#slide-"]').forEach(link => link.addEventListener('click', event => { if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return; event.preventDefault(); const id = link.getAttribute('href').slice(1); const index = slides.findIndex(slide => slide.id === id); if (index >= 0) show(index); }));
-window.addEventListener('hashchange', () => { if (/^#(?:slide-)?\d+$/.test(location.hash)) show(hashIndex()); });
+window.addEventListener('hashchange', () => { if (slides.some(slide => '#' + slide.id === location.hash) || /^#\d+$/.test(location.hash)) show(hashIndex()); });
 document.addEventListener('keydown', event => {
  if (event.ctrlKey || event.metaKey || event.altKey || event.target.closest('input,textarea,select,[contenteditable]')) return;
  if (event.target.closest('button,a,summary') && [' ','Enter'].includes(event.key)) return;
